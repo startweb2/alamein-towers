@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALAMEIN TOWERS | أبراج العلمين - A New Standard of Coastal Luxury</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Sticky Navigation Bar -->
+  <header class="navbar" id="navbar">
+    <!-- Brand Logo -->
+    <a href="#" class="nav-brand">
+      <svg class="brand-towers-icon" width="36" height="44" viewBox="0 0 38 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15 4L23 8V44H15V4Z" fill="url(#goldGrad)" opacity="0.95"/>
+        <line x1="19" y1="10" x2="19" y2="44" stroke="#0a0e14" stroke-width="1.2"/>
+        <path d="M6 12L13 15V44H6V12Z" fill="url(#goldGrad)" opacity="0.8"/>
+        <line x1="9.5" y1="16" x2="9.5" y2="44" stroke="#0a0e14" stroke-width="1.2"/>
+        <path d="M25 18L32 21V44H25V18Z" fill="url(#goldGrad)" opacity="0.8"/>
+        <line x1="28.5" y1="22" x2="28.5" y2="44" stroke="#0a0e14" stroke-width="1.2"/>
+        <line x1="2" y1="44" x2="36" y2="44" stroke="url(#goldGrad)" stroke-width="2"/>
+        <defs>
+          <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#faeccd"/>
+            <stop offset="45%" stop-color="#dfb76e"/>
+            <stop offset="100%" stop-color="#ba8733"/>
+          </linearGradient>
+        </defs>
+      </svg>
+      <div class="brand-text-block">
+        <span class="brand-title" data-i18n="brand_title">ALAMEIN</span>
+        <span class="brand-towers" data-i18n="brand_sub">TOWERS</span>
+        <span class="brand-arabic" data-i18n="brand_ar">أبراج العلمين</span>
+      </div>
+    </a>
+
+    <!-- Center Navigation Links -->
+    <nav class="nav-menu">
+      <a href="#home" class="nav-link active" data-i18n="nav_home">Home</a>
+      <a href="#about" class="nav-link" data-i18n="nav_about">About</a>
+      <a href="#residences" class="nav-link" data-i18n="nav_residences">Residences</a>
+      <a href="#amenities" class="nav-link" data-i18n="nav_amenities">Amenities</a>
+      <a href="#floorplans" class="nav-link" data-i18n="nav_floorplans">Floor Plans</a>
+      <a href="#gallery" class="nav-link" data-i18n="nav_gallery">Gallery</a>
+      <a href="#location" class="nav-link" data-i18n="nav_location">Location</a>
+      <a href="#contact" class="nav-link" data-i18n="nav_contact">Contact</a>
+    </nav>
+
+    <!-- Right Actions: Language Switcher & Book Button -->
+    <div class="nav-actions">
+      <!-- Interactive Language Toggle -->
+      <button class="lang-toggle-btn" id="lang-toggle-btn" aria-label="Switch Language">
+        <svg class="globe-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="2" y1="12" x2="22" y2="12"></line>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+        </svg>
+        <span class="lang-text" id="lang-indicator">العربية</span>
+      </button>
+
+      <button class="btn-book-tour" id="btn-open-booking">
+        <span data-i18n="btn_book_tour">Book a Tour</span>
+        <svg class="btn-arrow-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- ====================================================================== -->
+  <!-- SCROLLYTELLING CONTAINER: 4 CHAPTERS PINNED ON IMAGE SEQUENCE CANVAS    -->
+  <!-- ====================================================================== -->
+  <div class="scrolly-container" id="scrolly-container">
+    <div class="scrolly-sticky-viewport">
+      <canvas id="sequence-canvas"></canvas>
+
+      <!-- Deep Vignette Gradients for Legibility (Ensures 100% Solid Contrast) -->
+      <div class="hero-scrim-left"></div>
+      <div class="hero-scrim-top"></div>
+      <div class="hero-scrim-bottom"></div>
+
+      <!-- Left Vertical Rail with dynamic filling progress line -->
+      <aside class="left-step-rail" id="left-step-rail">
+        <div class="step-line-bg">
+          <div class="step-line-fill" id="step-line-fill"></div>
+        </div>
+        <div class="step-item active" data-step="1">
+          <span class="step-circle"></span>
+          <span class="step-num">01</span>
+        </div>
+        <div class="step-item" data-step="2">
+          <span class="step-num">02</span>
+        </div>
+        <div class="step-item" data-step="3">
+          <span class="step-num">03</span>
+        </div>
+        <div class="step-item" data-step="4">
+          <span class="step-num">04</span>
+        </div>
+      </aside>
+
+      <!-- Right Scroll To Discover Cue -->
+      <div class="right-scroll-cue" id="right-scroll-cue">
+        <span class="scroll-cue-text" data-i18n="scroll_cue">SCROLL TO DISCOVER</span>
+        <div class="scroll-cue-line"></div>
+        <svg class="scroll-cue-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="12" y1="5" x2="12" y2="19"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </div>
+
+      <!-- ================================================================== -->
+      <!-- CHAPTER 1: A New Standard of Coastal Luxury                        -->
+      <!-- ================================================================== -->
+      <div class="chapter-overlay chapter-1 active" id="chapter-1">
+        <div class="chapter-content">
+          <div class="chapter-eyebrow">
+            <span class="eyebrow-text" data-i18n="c1_eyebrow">EXCLUSIVE SEAFRONT LIVING</span>
+          </div>
+
+          <h1 class="chapter-title">
+            <span class="title-line" data-i18n="c1_title_l1">A New Standard</span>
+            <span class="title-line">
+              <span data-i18n="c1_title_l2_pre">of Coastal</span>
+              <em class="gold-gradient-text" data-i18n="c1_title_l2_gold">Luxury</em>
+            </span>
+          </h1>
+
+          <p class="chapter-description" data-i18n="c1_desc">
+            Experience exclusive seafront living in New Alamein, where panoramic sea views,
+            architectural elegance, and premium residences come together in perfect harmony.
+          </p>
+
+          <div class="chapter-actions">
+            <button class="btn-primary" data-jump-to="2">
+              <span data-i18n="btn_explore">Explore Residences</span>
+              <svg class="btn-arrow-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+
+            <a href="#floorplans" class="btn-glass">
+              <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                <line x1="3" y1="9" x2="21" y2="9"></line>
+                <line x1="9" y1="21" x2="9" y2="9"></line>
+              </svg>
+              <span data-i18n="btn_view_floorplans">View Floor Plans</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Bottom 3 Pill Highlights for Chapter 1 -->
+        <div class="hero-highlights-dock">
+          <div class="highlight-item">
+            <svg class="hl-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <div class="hl-meta">
+              <span class="hl-title" data-i18n="c1_h1_title">New Alamein, Egypt</span>
+              <span class="hl-sub" data-i18n="c1_h1_sub">PRIME LOCATION</span>
+            </div>
+          </div>
+
+          <div class="highlight-item">
+            <svg class="hl-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <rect x="2" y="6" width="20" height="12" rx="2"></rect>
+              <circle cx="16" cy="10" r="1.5"></circle>
+              <path d="M2 15c2-1 4-1 6 0s4 1 6 0 4-1 6 0"></path>
+            </svg>
+            <div class="hl-meta">
+              <span class="hl-title" data-i18n="c1_h2_title">Panoramic Sea Views</span>
+              <span class="hl-sub" data-i18n="c1_h2_sub">BREATHTAKING HORIZONS</span>
+            </div>
+          </div>
+
+          <div class="highlight-item">
+            <svg class="hl-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M12 22v-9"></path>
+              <path d="M12 13c-3-3-3-7 0-10 3 3 3 7 0 10z"></path>
+              <path d="M12 13c-5-1-8-5-6-8 3 2 6 5 6 8z"></path>
+              <path d="M12 13c5-1 8-5 6-8-3 2-6 5-6 8z"></path>
+            </svg>
+            <div class="hl-meta">
+              <span class="hl-title" data-i18n="c1_h3_title">Luxury Waterfront Living</span>
+              <span class="hl-sub" data-i18n="c1_h3_sub">A REFINED LIFESTYLE</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================================================================== -->
+      <!-- CHAPTER 2: Your Home Closer to the Sea                             -->
+      <!-- ================================================================== -->
+      <div class="chapter-overlay chapter-2" id="chapter-2">
+        <div class="chapter-content">
+          <div class="chapter-eyebrow">
+            <span class="eyebrow-text" data-i18n="c2_eyebrow">A LIFE BY THE MEDITERRANEAN</span>
+          </div>
+
+          <h2 class="chapter-title">
+            <span class="title-line" data-i18n="c2_title_l1">Your Home</span>
+            <span class="title-line" data-i18n="c2_title_l2">Closer to the Sea</span>
+          </h2>
+
+          <p class="chapter-description" data-i18n="c2_desc">
+            Step inside a world of elegance, where modern design meets breathtaking sea views.
+            Discover thoughtfully designed living spaces, refined interiors, and a coastal lifestyle
+            inspired by the beauty of New Alamein.
+          </p>
+
+          <div class="chapter-actions">
+            <button class="btn-primary" data-jump-to="3">
+              <span data-i18n="btn_explore">Explore Residences</span>
+              <svg class="btn-arrow-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+
+            <!-- Interactive Video Tour Trigger -->
+            <button class="btn-watch-video" id="btn-watch-experience">
+              <span class="play-icon-wrap">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+              </span>
+              <span data-i18n="btn_watch_experience">Watch The Experience</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Bottom 3 Direct Icons for Chapter 2 -->
+        <div class="hero-features-minimal">
+          <div class="feat-min-item">
+            <svg class="feat-icon" width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.6">
+              <rect x="2" y="5" width="24" height="18" rx="2"></rect>
+              <circle cx="18" cy="11" r="2.5"></circle>
+              <path d="M2 19c3-2 6-2 9 0s6 2 9 0 4-1 6 0"></path>
+            </svg>
+            <div class="feat-label">
+              <span data-i18n="c2_f1_l1">Panoramic</span>
+              <span data-i18n="c2_f1_l2">Sea Views</span>
+            </div>
+          </div>
+
+          <div class="feat-min-item">
+            <svg class="feat-icon" width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.6">
+              <path d="M5 12V9a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v3"></path>
+              <path d="M3 13a2 2 0 0 1 2-2h18a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-6z"></path>
+              <line x1="7" y1="21" x2="7" y2="23"></line>
+              <line x1="21" y1="21" x2="21" y2="23"></line>
+              <line x1="3" y1="16" x2="25" y2="16"></line>
+            </svg>
+            <div class="feat-label">
+              <span data-i18n="c2_f2_l1">Luxury</span>
+              <span data-i18n="c2_f2_l2">Interiors</span>
+            </div>
+          </div>
+
+          <div class="feat-min-item">
+            <svg class="feat-icon" width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.6">
+              <path d="M12 22v-9"></path>
+              <path d="M12 13c-3-3-3-7 0-10 3 3 3 7 0 10z"></path>
+              <path d="M12 13c-5-1-8-5-6-8 3 2 6 5 6 8z"></path>
+              <path d="M12 13c5-1 8-5 6-8-3 2-6 5-6 8z"></path>
+            </svg>
+            <div class="feat-label">
+              <span data-i18n="c2_f3_l1">Coastal</span>
+              <span data-i18n="c2_f3_l2">Lifestyle</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================================================================== -->
+      <!-- CHAPTER 3: Designed for a Higher Standard                          -->
+      <!-- ================================================================== -->
+      <div class="chapter-overlay chapter-3" id="chapter-3">
+        <div class="chapter-content">
+          <div class="chapter-eyebrow">
+            <span class="eyebrow-text" data-i18n="c3_eyebrow">RESIDENCES</span>
+          </div>
+
+          <h2 class="chapter-title">
+            <span class="title-line" data-i18n="c3_title_l1">Designed for</span>
+            <span class="title-line" data-i18n="c3_title_l2">a Higher Standard</span>
+          </h2>
+
+          <p class="chapter-description" data-i18n="c3_desc">
+            A collection of premium apartments with modern layouts, expansive terraces,
+            and stunning sea views, crafted to match your lifestyle.
+          </p>
+
+          <!-- 4 Grid Features -->
+          <div class="specs-grid-4">
+            <div class="spec-card">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M2 4v16"></path><path d="M2 8h18a2 2 0 0 1 2 2v10"></path><path d="M2 17h20"></path><path d="M6 8v9"></path>
+              </svg>
+              <div>
+                <span class="spec-val" data-i18n="c3_s1_val">1-4 Bedrooms</span>
+                <span class="spec-sub" data-i18n="c3_s1_sub">Flexible Spaces</span>
+              </div>
+            </div>
+
+            <div class="spec-card">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                <line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line>
+              </svg>
+              <div>
+                <span class="spec-val" data-i18n="c3_s2_val">Spacious Layouts</span>
+                <span class="spec-sub" data-i18n="c3_s2_sub">Open Flow Concept</span>
+              </div>
+            </div>
+
+            <div class="spec-card">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M3 21h18"></path><path d="M5 21V7l7-4 7 4v14"></path><line x1="9" y1="12" x2="15" y2="12"></line>
+              </svg>
+              <div>
+                <span class="spec-val" data-i18n="c3_s3_val">Private Terraces</span>
+                <span class="spec-sub" data-i18n="c3_s3_sub">Direct Sea View</span>
+              </div>
+            </div>
+
+            <div class="spec-card">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+              <div>
+                <span class="spec-val" data-i18n="c3_s4_val">Premium Finishes</span>
+                <span class="spec-sub" data-i18n="c3_s4_sub">Italian Marble &amp; Glass</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="chapter-actions">
+            <button class="btn-primary" data-jump-to="4">
+              <span data-i18n="btn_explore">Explore Residences</span>
+              <svg class="btn-arrow-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Interactive Mini Gallery Thumbnails Strip -->
+        <div class="mini-gallery-strip">
+          <div class="thumb-card active" data-frame-jump="80" title="Living Area">
+            <div class="thumb-img-wrapper" style="background-image: url('ezgif-26abb239274a1d7d-jpg/ezgif-frame-080.jpg');"></div>
+            <span class="thumb-badge" data-i18n="thumb_living">Living</span>
+          </div>
+          <div class="thumb-card" data-frame-jump="120" title="Balcony View">
+            <div class="thumb-img-wrapper" style="background-image: url('ezgif-26abb239274a1d7d-jpg/ezgif-frame-120.jpg');"></div>
+            <span class="thumb-badge" data-i18n="thumb_terrace">Terrace</span>
+          </div>
+          <div class="thumb-card" data-frame-jump="160" title="Master Suite">
+            <div class="thumb-img-wrapper" style="background-image: url('ezgif-26abb239274a1d7d-jpg/ezgif-frame-160.jpg');"></div>
+            <span class="thumb-badge" data-i18n="thumb_suite">Suite</span>
+          </div>
+          <div class="thumb-card" data-frame-jump="200" title="Penthouse Horizon">
+            <div class="thumb-img-wrapper" style="background-image: url('ezgif-26abb239274a1d7d-jpg/ezgif-frame-200.jpg');"></div>
+            <span class="thumb-badge" data-i18n="thumb_panorama">Panorama</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================================================================== -->
+      <!-- CHAPTER 4: A Complete Coastal Lifestyle                            -->
+      <!-- ================================================================== -->
+      <div class="chapter-overlay chapter-4" id="chapter-4">
+        <div class="chapter-content">
+          <div class="chapter-eyebrow">
+            <span class="eyebrow-text" data-i18n="c4_eyebrow">WORLD-CLASS AMENITIES</span>
+          </div>
+
+          <h2 class="chapter-title">
+            <span class="title-line" data-i18n="c4_title_l1">A Complete</span>
+            <span class="title-line">
+              <span data-i18n="c4_title_l2_pre">Coastal</span>
+              <em class="gold-gradient-text" data-i18n="c4_title_l2_gold">Lifestyle</em>
+            </span>
+          </h2>
+
+          <p class="chapter-description" data-i18n="c4_desc">
+            Enjoy a wide range of amenities designed for your comfort, wellness, and entertainment.
+          </p>
+
+          <div class="chapter-actions">
+            <a href="#amenities" class="btn-primary">
+              <span data-i18n="btn_discover_amenities">Discover Amenities</span>
+              <svg class="btn-arrow-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- 6 Amenities Badges Dock -->
+        <div class="amenities-dock-6">
+          <div class="amenity-badge">
+            <svg class="am-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M2 12c3-2 6-2 9 0s6 2 9 0 3-1 4-1"></path>
+              <path d="M2 18c3-2 6-2 9 0s6 2 9 0 3-1 4-1"></path>
+            </svg>
+            <div>
+              <span class="am-title" data-i18n="am_pools">Infinity Pools</span>
+              <span class="am-sub" data-i18n="am_pools_sub">Temperature Controlled</span>
+            </div>
+          </div>
+
+          <div class="amenity-badge">
+            <svg class="am-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M12 22v-9"></path><path d="M12 13c-3-3-3-7 0-10 3 3 3 7 0 10z"></path>
+              <path d="M12 13c-5-1-8-5-6-8 3 2 6 5 6 8z"></path><path d="M12 13c5-1 8-5 6-8-3 2-6 5-6 8z"></path>
+            </svg>
+            <div>
+              <span class="am-title" data-i18n="am_beach">Private Beach Access</span>
+              <span class="am-sub" data-i18n="am_beach_sub">1.2 km Crystal Coast</span>
+            </div>
+          </div>
+
+          <div class="amenity-badge">
+            <svg class="am-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M6 18h12"></path><path d="M12 6v12"></path><path d="M5 9a3 3 0 0 1 6-2 3 3 0 0 1 6 2"></path>
+            </svg>
+            <div>
+              <span class="am-title" data-i18n="am_wellness">Fitness &amp; Wellness</span>
+              <span class="am-sub" data-i18n="am_wellness_sub">Spa &amp; Luxury Gym</span>
+            </div>
+          </div>
+
+          <div class="amenity-badge">
+            <svg class="am-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+              <line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line>
+            </svg>
+            <div>
+              <span class="am-title" data-i18n="am_dining">Fine Dining</span>
+              <span class="am-sub" data-i18n="am_dining_sub">Signature Waterfront</span>
+            </div>
+          </div>
+
+          <div class="amenity-badge">
+            <svg class="am-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+              <line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path>
+            </svg>
+            <div>
+              <span class="am-title" data-i18n="am_retail">Retail &amp; Leisure</span>
+              <span class="am-sub" data-i18n="am_retail_sub">Designer Boutiques</span>
+            </div>
+          </div>
+
+          <div class="amenity-badge">
+            <svg class="am-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M12 2a9 9 0 0 0-9 9c0 4.17 2.84 7.67 6.69 8.69L12 22l2.31-2.31C18.16 18.67 21 15.17 21 11a9 9 0 0 0-9-9z"></path>
+            </svg>
+            <div>
+              <span class="am-title" data-i18n="am_parks">Green Spaces</span>
+              <span class="am-sub" data-i18n="am_parks_sub">Botanical Gardens</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ====================================================================== -->
+  <!-- SECTION 5: FLOOR PLANS WITH 3D MODELS (EXACT IMAGE 2 REPLICATION)       -->
+  <!-- ====================================================================== -->
+  <section class="section-floorplans" id="floorplans">
+    <div class="section-container">
+      
+      <!-- Top Floorplans Main Grid: Info + Center 3D Model + Right Specs -->
+      <div class="floorplans-main-card">
+        
+        <!-- Left Column: Editorial & 3 Feature Badges -->
+        <div class="fp-editorial-col">
+          <div class="section-eyebrow">
+            <span class="eyebrow-text" data-i18n="fp_eyebrow">FLOOR PLANS</span>
+          </div>
+
+          <h2 class="section-title">
+            <span class="title-line" data-i18n="fp_title_l1">Smart Layouts</span>
+            <span class="title-line gold-accent" data-i18n="fp_title_l2">Exceptional Views</span>
+          </h2>
+
+          <p class="section-desc" data-i18n="fp_desc">
+            Choose from a variety of floor plans designed to maximize space, light, and sea views,
+            crafted for a modern and sophisticated lifestyle.
+          </p>
+
+          <button class="btn-primary" id="btn-request-plan">
+            <span data-i18n="btn_view_all_plans">View All Floor Plans</span>
+            <svg class="btn-arrow-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+
+          <!-- 3 Sub-Features Below Button (Matching Screenshot) -->
+          <div class="fp-sub-features">
+            <div class="fp-sub-feat">
+              <div class="fp-feat-icon-circle">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M5 12V9a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v3"></path>
+                  <path d="M3 13a2 2 0 0 1 2-2h18a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-6z"></path>
+                </svg>
+              </div>
+              <span class="fp-feat-label" data-i18n="fp_f_living">Spacious Living Area</span>
+            </div>
+
+            <div class="fp-sub-feat">
+              <div class="fp-feat-icon-circle">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <rect x="2" y="5" width="24" height="18" rx="2"></rect>
+                  <circle cx="18" cy="11" r="2.5"></circle>
+                  <path d="M2 19c3-2 6-2 9 0s6 2 9 0 4-1 6 0"></path>
+                </svg>
+              </div>
+              <span class="fp-feat-label" data-i18n="fp_f_sea">Panoramic Sea Views</span>
+            </div>
+
+            <div class="fp-sub-feat">
+              <div class="fp-feat-icon-circle">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M12 22v-9"></path><path d="M12 13c-3-3-3-7 0-10 3 3 3 7 0 10z"></path>
+                  <path d="M12 13c-5-1-8-5-6-8 3 2 6 5 6 8z"></path><path d="M12 13c5-1 8-5 6-8-3 2-6 5-6 8z"></path>
+                </svg>
+              </div>
+              <span class="fp-feat-label" data-i18n="fp_f_design">Modern Design</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Center Column: 3D Architectural Cutaway Model -->
+        <div class="fp-model-center-col">
+          <div class="fp-3d-model-stage">
+            <img src="assets/floorplans/unit-1bed-hd.png" alt="3D Floor Plan Model" class="fp-3d-render-img" id="fp-3d-render-img">
+            
+            <!-- Interactive Floating Room Badge -->
+            <div class="fp-3d-floating-tag" id="fp-floating-tag">
+              <span class="tag-dot"></span>
+              <span class="tag-text" id="fp-tag-text">Full 3D Architectural Cutaway</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Specs + Key Plan + Bedroom Switcher Tabs -->
+        <div class="fp-specs-col">
+          <!-- Top Badge: Selected Unit Name -->
+          <div class="fp-unit-gold-badge" id="unit-badge">
+            <span id="unit-title">1 Bedroom Apartment</span>
+          </div>
+
+          <!-- Total Area -->
+          <div class="fp-area-display">
+            <div class="fp-area-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+              </svg>
+            </div>
+            <div>
+              <span class="fp-area-val" id="unit-area">85 – 120 m²</span>
+              <span class="fp-area-label" data-i18n="specs_total_area">Total Area</span>
+            </div>
+          </div>
+
+          <!-- Unit Specs Bullets -->
+          <ul class="fp-bullet-specs" id="specs-list">
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 4v16"></path><path d="M2 8h18a2 2 0 0 1 2 2v10"></path><path d="M2 17h20"></path><path d="M6 8v9"></path></svg>
+              <span id="spec-beds">1 Bedroom</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 6h6"></path><path d="M12 3v3"></path><path d="M4 11h16a1 1 0 0 1 1 1v2a6 6 0 0 1-6 6H9a6 6 0 0 1-6-6v-2a1 1 0 0 1 1-1z"></path></svg>
+              <span id="spec-baths">1 Bathroom</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12V9a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v3"></path><path d="M3 13a2 2 0 0 1 2-2h18a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-6z"></path></svg>
+              <span id="spec-living">Spacious Living Area</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 12c3-2 6-2 9 0s6 2 9 0 3-1 4-1"></path><rect x="3" y="3" width="18" height="18" rx="2"></rect></svg>
+              <span id="spec-balcony">Sea View Balcony</span>
+            </li>
+          </ul>
+
+          <!-- Building Contour Key Plan (from Screenshot) -->
+          <div class="fp-keyplan-box">
+            <img src="assets/floorplans/keyplan-hd.png" alt="Building Footprint Plan" class="fp-keyplan-img">
+          </div>
+
+          <!-- Floor Plan Switcher Tabs (Placed directly below keyplan as in screenshot) -->
+          <div class="floorplan-tabs-bottom">
+            <button class="fp-tab active" data-unit="1bed" data-i18n="fp_tab_1bed">1 Bedroom</button>
+            <button class="fp-tab" data-unit="2bed" data-i18n="fp_tab_2bed">2 Bedrooms</button>
+            <button class="fp-tab" data-unit="3bed" data-i18n="fp_tab_3bed">3 Bedrooms</button>
+            <button class="fp-tab" data-unit="4bed" data-i18n="fp_tab_4bed">4 Bedrooms</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Row: 5 Room Thumbnails Gallery (from Screenshot) -->
+      <div class="fp-room-photos-row">
+        <div class="room-photo-card" data-room-name="Living Room" data-room-ar="صالون المعيشة" data-src="assets/rooms/room-living-hd.png">
+          <div class="room-photo-img" style="background-image: url('assets/rooms/room-living-hd.png');"></div>
+          <div class="room-photo-caption">
+            <span class="room-caption-text" data-i18n="room_living">Living Room</span>
+            <span class="room-arrow-btn">&#8594;</span>
+          </div>
+        </div>
+
+        <div class="room-photo-card" data-room-name="Bedroom" data-room-ar="غرفة النوم" data-src="assets/rooms/room-bedroom-hd.png">
+          <div class="room-photo-img" style="background-image: url('assets/rooms/room-bedroom-hd.png');"></div>
+          <div class="room-photo-caption">
+            <span class="room-caption-text" data-i18n="room_bedroom">Bedroom</span>
+            <span class="room-arrow-btn">&#8594;</span>
+          </div>
+        </div>
+
+        <div class="room-photo-card" data-room-name="Kitchen" data-room-ar="المطبخ العصري" data-src="assets/rooms/room-kitchen-hd.png">
+          <div class="room-photo-img" style="background-image: url('assets/rooms/room-kitchen-hd.png');"></div>
+          <div class="room-photo-caption">
+            <span class="room-caption-text" data-i18n="room_kitchen">Kitchen</span>
+            <span class="room-arrow-btn">&#8594;</span>
+          </div>
+        </div>
+
+        <div class="room-photo-card" data-room-name="Bathroom" data-room-ar="الحمام الفندقي" data-src="assets/rooms/room-bathroom-hd.png">
+          <div class="room-photo-img" style="background-image: url('assets/rooms/room-bathroom-hd.png');"></div>
+          <div class="room-photo-caption">
+            <span class="room-caption-text" data-i18n="room_bathroom">Bathroom</span>
+            <span class="room-arrow-btn">&#8594;</span>
+          </div>
+        </div>
+
+        <div class="room-photo-card" data-room-name="Balcony View" data-room-ar="إطلالة الشرفة" data-src="assets/rooms/room-balcony-hd.png">
+          <div class="room-photo-img" style="background-image: url('assets/rooms/room-balcony-hd.png');"></div>
+          <div class="room-photo-caption">
+            <span class="room-caption-text" data-i18n="room_balcony">Balcony View</span>
+            <span class="room-arrow-btn">&#8594;</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ====================================================================== -->
+  <!-- SECTION 6: GALLERY WITH INTERACTIVE LIGHTBOX                           -->
+  <!-- ====================================================================== -->
+  <section class="section-gallery" id="gallery">
+    <div class="section-container">
+      <div class="gallery-header-row">
+        <div>
+          <div class="section-eyebrow">
+            <span class="eyebrow-text" data-i18n="gal_eyebrow">GALLERY</span>
+          </div>
+          <h2 class="section-title">
+            <span class="title-line" data-i18n="gal_title_l1">A Glimpse</span>
+            <span class="title-line" data-i18n="gal_title_l2">of the Experience</span>
+          </h2>
+          <p class="section-desc" data-i18n="gal_desc">
+            Explore stunning views, elegant interiors, and the vibrant lifestyle at Alamein Towers.
+          </p>
+        </div>
+
+        <div class="gallery-filters" id="gallery-filters">
+          <button class="gal-filter-btn active" data-filter="all" data-i18n="gal_filter_all">All Views</button>
+          <button class="gal-filter-btn" data-filter="exterior" data-i18n="gal_filter_ext">Exterior</button>
+          <button class="gal-filter-btn" data-filter="interior" data-i18n="gal_filter_int">Interiors</button>
+          <button class="gal-filter-btn" data-filter="views" data-i18n="gal_filter_views">Sea Horizons</button>
+        </div>
+      </div>
+
+      <!-- 4 Showcase Image Cards -->
+      <div class="gallery-cards-grid" id="gallery-grid">
+        <div class="gallery-card" data-category="exterior" data-src="ezgif-26abb239274a1d7d-jpg/ezgif-frame-005.jpg" data-caption-en="Tower Architecture at Sunset" data-caption-ar="التصميم المعماري للأبراج وقت الغروب">
+          <div class="gallery-img-box" style="background-image: url('ezgif-26abb239274a1d7d-jpg/ezgif-frame-005.jpg');">
+            <div class="gallery-zoom-overlay">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                <line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line>
+              </svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <span class="gal-card-title" data-i18n="gal_c1">Tower Architecture at Sunset</span>
+            <span class="gal-card-tag" data-i18n="gal_tag_ext">Exterior</span>
+          </div>
+        </div>
+
+        <div class="gallery-card" data-category="interior" data-src="ezgif-26abb239274a1d7d-jpg/ezgif-frame-075.jpg" data-caption-en="Seafront Living Room & Penthouse Lounge" data-caption-ar="صالون المعيشة البانورامي المطل على البحر">
+          <div class="gallery-img-box" style="background-image: url('ezgif-26abb239274a1d7d-jpg/ezgif-frame-075.jpg');">
+            <div class="gallery-zoom-overlay">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                <line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line>
+              </svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <span class="gal-card-title" data-i18n="gal_c2">Seafront Living Room</span>
+            <span class="gal-card-tag" data-i18n="gal_tag_int">Interior</span>
+          </div>
+        </div>
+
+        <div class="gallery-card" data-category="interior" data-src="ezgif-26abb239274a1d7d-jpg/ezgif-frame-130.jpg" data-caption-en="Master Penthouse Suite with Ocean View" data-caption-ar="جناح النوم الرئيسي بإطلالة مباشرة على الأفق">
+          <div class="gallery-img-box" style="background-image: url('ezgif-26abb239274a1d7d-jpg/ezgif-frame-130.jpg');">
+            <div class="gallery-zoom-overlay">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                <line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line>
+              </svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <span class="gal-card-title" data-i18n="gal_c3">Master Penthouse Suite</span>
+            <span class="gal-card-tag" data-i18n="gal_tag_int">Interior</span>
+          </div>
+        </div>
+
+        <div class="gallery-card" data-category="views" data-src="ezgif-26abb239274a1d7d-jpg/ezgif-frame-195.jpg" data-caption-en="Lagoon Resort & Mediterranean Horizon" data-caption-ar="بحيرة المنتجع والأفق الساحلي الخلاب">
+          <div class="gallery-img-box" style="background-image: url('ezgif-26abb239274a1d7d-jpg/ezgif-frame-195.jpg');">
+            <div class="gallery-zoom-overlay">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                <line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line>
+              </svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <span class="gal-card-title" data-i18n="gal_c4">Sunset Resort Lagoon</span>
+            <span class="gal-card-tag" data-i18n="gal_tag_view">Sea View</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================== -->
+  <!-- SECTION 7: LOCATION                                                    -->
+  <!-- ====================================================================== -->
+  <section class="section-location" id="location">
+    <div class="section-container">
+      <div class="location-grid">
+        <div class="location-info">
+          <div class="section-eyebrow">
+            <span class="eyebrow-text" data-i18n="loc_eyebrow">LOCATION</span>
+          </div>
+
+          <h2 class="section-title">
+            <span class="title-line" data-i18n="loc_title_l1">In the Heart of</span>
+            <span class="title-line" data-i18n="loc_title_l2">New Alamein</span>
+          </h2>
+
+          <p class="section-desc" data-i18n="loc_desc">
+            A prime location on the Mediterranean North Coast. Click any destination card below to highlight transit time and connection routes.
+          </p>
+
+          <div class="location-summary-badge">
+            <span class="loc-coord">30°50'18.4"N 28°57'02.1"E</span>
+            <span class="loc-zone" data-i18n="loc_zone">Zone A - Direct Beachfront</span>
+          </div>
+        </div>
+
+        <div class="location-map-card">
+          <svg class="map-bg-svg" viewBox="0 0 600 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="600" height="360" fill="#0d1b2a"/>
+            <path d="M0,170 Q160,140 310,180 T600,165 L600,360 L0,360 Z" fill="#1b263b"/>
+            <path d="M160,235 Q240,205 340,235 T490,225 L460,295 Q330,315 190,285 Z" fill="#0d1b2a" opacity="0.65"/>
+            <path class="map-highway" d="M0,195 Q200,175 400,205 T600,190" stroke="#415a77" stroke-width="2.5" stroke-dasharray="6 4"/>
+            <path class="map-access-road" d="M280,360 L315,200" stroke="#dfb76e" stroke-width="2"/>
+            <path class="map-active-route" id="map-active-route" d="M315,175 Q380,185 450,195" stroke="#dfb76e" stroke-width="3" stroke-dasharray="4 4" opacity="0"></path>
+
+            <g class="map-pin-group" data-dest="marina" transform="translate(450, 195)">
+              <circle cx="0" cy="0" r="10" fill="rgba(223, 183, 110, 0.25)"/>
+              <circle cx="0" cy="0" r="5" fill="#dfb76e"/>
+              <text x="12" y="4" fill="#f7e6ca" font-size="10" font-family="'Cairo', sans-serif">Marina (5m)</text>
+            </g>
+
+            <g class="map-pin-group" data-dest="airport" transform="translate(140, 240)">
+              <circle cx="0" cy="0" r="10" fill="rgba(255, 255, 255, 0.2)"/>
+              <circle cx="0" cy="0" r="5" fill="#fff"/>
+              <text x="-95" y="4" fill="#ffffff" font-size="10" font-family="'Cairo', sans-serif">Airport (15m)</text>
+            </g>
+
+            <g transform="translate(315, 175)">
+              <circle class="hero-pin-pulse" cx="0" cy="0" r="20" fill="rgba(223, 183, 110, 0.2)"/>
+              <circle cx="0" cy="0" r="10" fill="#dfb76e"/>
+              <circle cx="0" cy="0" r="4" fill="#06090e"/>
+              <rect x="18" y="-22" width="160" height="40" rx="8" fill="rgba(10, 15, 22, 0.92)" stroke="rgba(223, 183, 110, 0.5)"/>
+              <text x="28" y="-5" fill="#ffffff" font-size="11" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700">ALAMEIN TOWERS</text>
+              <text x="28" y="9" fill="#dfb76e" font-size="9" font-family="'Cairo', sans-serif">أبراج العلمين</text>
+            </g>
+          </svg>
+        </div>
+
+        <div class="location-highlights-list" id="location-list">
+          <div class="loc-hl-card active" data-dest="beach">
+            <svg class="loc-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M2 12c3-2 6-2 9 0s6 2 9 0 3-1 4-1"></path>
+              <circle cx="12" cy="7" r="3"></circle>
+            </svg>
+            <div>
+              <span class="loc-hl-title" data-i18n="loc_c1_title">Direct Beachfront Location</span>
+              <span class="loc-hl-dist" data-i18n="loc_c1_dist">0 min walk (Direct Access)</span>
+            </div>
+          </div>
+
+          <div class="loc-hl-card" data-dest="marina">
+            <svg class="loc-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <circle cx="12" cy="12" r="10"></circle><polygon points="12 6 12 12 16 14"></polygon>
+            </svg>
+            <div>
+              <span class="loc-hl-title" data-i18n="loc_c2_title">Alamein Marina &amp; Promenade</span>
+              <span class="loc-hl-dist" data-i18n="loc_c2_dist">5 mins drive</span>
+            </div>
+          </div>
+
+          <div class="loc-hl-card" data-dest="airport">
+            <svg class="loc-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 20.5 3c-1-1-3-.5-4.5 1L12.5 7.5 4.3 5.7c-.5-.1-1 .1-1.3.5l-.5.5c-.4.4-.3 1.1.2 1.4L7 11.5l-2.5 2.5-2.2-.4c-.4-.1-.8.1-1 .4l-.3.3c-.3.3-.2.8.1 1.1l2.5 2 2 2.5c.3.3.8.4 1.1.1l.3-.3c.3-.2.5-.6.4-1l-.4-2.2 2.5-2.5 3.4 4.3c.3.5 1 .6 1.4.2l.5-.5c.4-.3.6-.8.5-1.3z"></path>
+            </svg>
+            <div>
+              <span class="loc-hl-title" data-i18n="loc_c3_title">Alamein International Airport</span>
+              <span class="loc-hl-dist" data-i18n="loc_c3_dist">15 mins drive</span>
+            </div>
+          </div>
+
+          <div class="loc-hl-card" data-dest="cairo">
+            <svg class="loc-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <rect x="3" y="11" width="18" height="10" rx="2"></rect>
+              <circle cx="7" cy="18" r="2"></circle><circle cx="17" cy="18" r="2"></circle>
+              <path d="M5 11l2-6h10l2 6"></path>
+            </svg>
+            <div>
+              <span class="loc-hl-title" data-i18n="loc_c4_title">Easy Access from Cairo</span>
+              <span class="loc-hl-dist" data-i18n="loc_c4_dist">2 hours via Dabaa Corridor</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================== -->
+  <!-- SECTION 8: FOOTER CTA                                                  -->
+  <!-- ====================================================================== -->
+  <footer class="section-footer-cta" id="contact">
+    <div class="footer-bg-wrapper" style="background-image: url('ezgif-26abb239274a1d7d-jpg/ezgif-frame-001.jpg');">
+      <div class="footer-overlay-gradient"></div>
+    </div>
+
+    <div class="footer-content-container">
+      <div class="footer-cta-box">
+        <h2 class="footer-cta-title" data-i18n="footer_title">Your Coastal Home Awaits</h2>
+        <p class="footer-cta-sub" data-i18n="footer_sub">Book a private tour and experience Alamein Towers in person.</p>
+
+        <div class="footer-btn-row">
+          <button class="btn-primary" id="btn-footer-book">
+            <span data-i18n="btn_book_tour">Book a Tour</span>
+            <svg class="btn-arrow-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+
+          <button class="btn-glass" id="btn-footer-contact">
+            <span data-i18n="btn_contact_us">Contact Us</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div class="footer-brand">
+          <span class="f-brand-title">ALAMEIN TOWERS</span>
+          <span class="f-brand-arabic">أبراج العلمين</span>
+        </div>
+        <p class="footer-copy" data-i18n="footer_copy">&copy; 2026 Alamein Towers. All rights reserved. Luxury Coastal Living.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ====================================================================== -->
+  <!-- INTERACTIVE MODALS                                                     -->
+  <!-- ====================================================================== -->
+  <div class="luxury-modal" id="modal-booking" aria-hidden="true">
+    <div class="modal-backdrop" id="modal-booking-backdrop"></div>
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="modal-booking-close" aria-label="Close modal">&times;</button>
+      
+      <div class="modal-header">
+        <span class="modal-eyebrow" data-i18n="modal_b_eyebrow">EXCLUSIVE ACCESS</span>
+        <h3 class="modal-title" data-i18n="modal_b_title">Schedule a Private Viewing</h3>
+        <p class="modal-sub" data-i18n="modal_b_sub">Experience the towers in person or receive a personalized digital walkthrough with our luxury property advisors.</p>
+      </div>
+
+      <form class="modal-form" id="booking-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" data-i18n="f_name">Full Name</label>
+            <input type="text" class="form-input" required placeholder="Ahmed Al-Mansoor" id="form-name">
+          </div>
+          <div class="form-group">
+            <label class="form-label" data-i18n="f_phone">Phone / WhatsApp</label>
+            <input type="tel" class="form-input" required placeholder="+20 100 000 0000" id="form-phone">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" data-i18n="f_email">Email Address</label>
+            <input type="email" class="form-input" required placeholder="name@example.com" id="form-email">
+          </div>
+          <div class="form-group">
+            <label class="form-label" data-i18n="f_unit">Interested In</label>
+            <select class="form-select" id="form-unit">
+              <option value="1bed" data-i18n="opt_1bed">1 Bedroom (85 - 120 m²)</option>
+              <option value="2bed" data-i18n="opt_2bed">2 Bedroom Luxury Suite (135 - 180 m²)</option>
+              <option value="3bed" data-i18n="opt_3bed">3 Bedroom Residence (210 - 275 m²)</option>
+              <option value="4bed" data-i18n="opt_4bed">4 Bedroom Royal Penthouse (320 - 450 m²)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" data-i18n="f_date">Preferred Date</label>
+          <input type="date" class="form-input" id="form-date">
+        </div>
+
+        <button type="submit" class="btn-primary btn-submit-form">
+          <span data-i18n="btn_confirm_booking">Confirm Viewing Request</span>
+          <svg class="btn-arrow-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </button>
+
+        <div class="form-success-msg" id="booking-success" style="display: none;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#dfb76e" stroke-width="2.5">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+          </svg>
+          <span data-i18n="booking_success_msg">Thank you. Our luxury advisor will contact you shortly to confirm your private viewing.</span>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Cinema Modal -->
+  <div class="luxury-modal" id="modal-video" aria-hidden="true">
+    <div class="modal-backdrop" id="modal-video-backdrop"></div>
+    <div class="modal-dialog modal-cinema">
+      <button class="modal-close-btn" id="modal-video-close" aria-label="Close modal">&times;</button>
+      <div class="cinema-player-box">
+        <div class="cinema-header">
+          <span class="cinema-tag" data-i18n="cinema_tag">CINEMATIC WALKTHROUGH</span>
+          <h4 class="cinema-title" data-i18n="cinema_title">Alamein Towers - Penthouse Experience</h4>
+        </div>
+        <div class="cinema-canvas-container" id="cinema-canvas-container">
+          <div class="cinema-frame" id="cinema-frame" style="background-image: url('ezgif-26abb239274a1d7d-jpg/ezgif-frame-095.jpg');"></div>
+          <div class="cinema-play-bar">
+            <button class="cinema-ctrl-btn" id="cinema-play-pause">&#9658;</button>
+            <div class="cinema-progress-track" id="cinema-scrub-track">
+              <div class="cinema-progress-bar" id="cinema-progress-bar"></div>
+            </div>
+            <span class="cinema-time" id="cinema-time">00:45 / 02:15</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gallery Lightbox -->
+  <div class="luxury-modal" id="modal-lightbox" aria-hidden="true">
+    <div class="modal-backdrop" id="modal-lightbox-backdrop"></div>
+    <div class="lightbox-dialog">
+      <button class="modal-close-btn lightbox-close" id="lightbox-close">&times;</button>
+      <button class="lightbox-arrow lb-prev" id="lightbox-prev">&#8249;</button>
+      <div class="lightbox-content">
+        <img src="" alt="Gallery HD" class="lightbox-img" id="lightbox-img">
+        <p class="lightbox-caption" id="lightbox-caption"></p>
+      </div>
+      <button class="lightbox-arrow lb-next" id="lightbox-next">&#8250;</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
