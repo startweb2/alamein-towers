@@ -34,10 +34,14 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
 }
 
 body {
   width: 100%;
+  max-width: 100%;
   min-height: 100%;
   background-color: var(--bg-dark);
   color: var(--text-white);
@@ -45,6 +49,12 @@ body {
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.25s ease;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -178,7 +188,8 @@ body {
   letter-spacing: 0.02em;
 }
 
-.nav-menu {
+.nav-menu,
+.nav-links {
   display: flex;
   align-items: center;
   gap: 28px;
@@ -305,17 +316,20 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   height: 100dvh;
   z-index: 9999;
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
-  transition: opacity 0.35s ease;
+  overflow: hidden;
+  transition: opacity 0.35s ease, visibility 0.35s ease;
 }
 
 .mobile-nav-drawer.active {
   opacity: 1;
+  visibility: visible;
   pointer-events: auto;
 }
 
@@ -479,7 +493,7 @@ body {
   position: sticky;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   overflow: hidden;
   z-index: 10;
@@ -2026,13 +2040,17 @@ body {
   transform: translateX(3px);
 }
 
+[dir="rtl"] .footer-link-arrow {
+  transform: scaleX(-1);
+}
+
 [dir="rtl"] .footer-link:hover {
   padding-left: 0;
   padding-right: 4px;
 }
 
 [dir="rtl"] .footer-link:hover .footer-link-arrow {
-  transform: translateX(-3px);
+  transform: scaleX(-1) translateX(3px);
 }
 
 /* Contact Column */
@@ -2141,19 +2159,23 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
+  height: 100dvh;
   z-index: 999;
   display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
-  transition: opacity 0.35s ease;
+  overflow: hidden;
+  transition: opacity 0.35s ease, visibility 0.35s ease;
 }
 
 .luxury-modal.active {
   opacity: 1;
+  visibility: visible;
   pointer-events: auto;
 }
 
@@ -2480,8 +2502,9 @@ body {
 
 /* Tablets & Small Screens (<= 992px) */
 @media (max-width: 992px) {
-  .nav-menu {
-    display: none;
+  .nav-menu,
+  .nav-links {
+    display: none !important;
   }
   .mobile-menu-toggle {
     display: flex;

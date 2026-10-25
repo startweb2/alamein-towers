@@ -663,16 +663,20 @@
 
   function preloadImages() {
     const firstImg = new Image();
-    firstImg.src = getFrameUrl(0);
-    images[0] = firstImg;
-
-    firstImg.onload = () => {
+    const onFirstLoad = () => {
       loadedFlags[0] = true;
       naturalWidth = firstImg.naturalWidth || 1920;
       naturalHeight = firstImg.naturalHeight || 1080;
       canvas._needsRedraw = true;
       drawFrame(0);
     };
+
+    firstImg.onload = onFirstLoad;
+    firstImg.src = getFrameUrl(0);
+    if (firstImg.complete) {
+      onFirstLoad();
+    }
+    images[0] = firstImg;
 
     for (let i = 1; i < FRAME_COUNT; i++) {
       const img = new Image();
@@ -1160,9 +1164,13 @@
     setupInteractiveElements();
     setupModals();
     setLanguage(currentLang);
+    updateChapters(0);
     onScroll();
 
-    currentFrame = targetFrame;
+    currentFrame = 0;
+    targetFrame = 0;
+    canvas._needsRedraw = true;
+    drawFrame(0);
     requestAnimationFrame(animate);
   }
 
