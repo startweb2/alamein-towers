@@ -560,16 +560,16 @@
     // Ch3: Fades in 0.46-0.52, Solid 1.0 from 0.52 to 0.70, fades out by 0.76
     // Ch4: Fades in 0.72-0.78, Solid 1.0 from 0.78 to 0.98
     const windows = [
-      [-0.1, 0.0, 0.17, 0.24],
-      [0.20, 0.26, 0.44, 0.50],
-      [0.46, 0.52, 0.70, 0.76],
-      [0.72, 0.78, 0.98, 1.05]
+      [-0.1, 0.0, 0.18, 0.23],
+      [0.23, 0.27, 0.46, 0.51],
+      [0.51, 0.55, 0.73, 0.78],
+      [0.78, 0.82, 0.95, 0.99]
     ];
 
     let activeIdx = 0;
-    if (progress >= 0.23 && progress < 0.48) activeIdx = 1;
-    else if (progress >= 0.48 && progress < 0.74) activeIdx = 2;
-    else if (progress >= 0.74) activeIdx = 3;
+    if (progress >= 0.25 && progress < 0.50) activeIdx = 1;
+    else if (progress >= 0.50 && progress < 0.76) activeIdx = 2;
+    else if (progress >= 0.76) activeIdx = 3;
 
     // Step Rail Dynamic Line Fill
     if (stepLineFill) {
