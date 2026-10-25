@@ -50,7 +50,7 @@
       <a href="#contact" class="nav-link" data-i18n="nav_contact">Contact</a>
     </nav>
 
-    <!-- Right Actions: Language Switcher & Book Button -->
+    <!-- Right Actions: Language Switcher, Book Button & Mobile Hamburger -->
     <div class="nav-actions">
       <!-- Interactive Language Toggle -->
       <button class="lang-toggle-btn" id="lang-toggle-btn" aria-label="Switch Language">
@@ -69,8 +69,58 @@
           <polyline points="12 5 19 12 12 19"></polyline>
         </svg>
       </button>
+
+      <!-- Mobile Hamburger Toggle -->
+      <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle Navigation">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
     </div>
   </header>
+
+  <!-- Luxury Mobile Slide-in Drawer -->
+  <div class="mobile-nav-drawer" id="mobile-nav-drawer" aria-hidden="true">
+    <div class="m-drawer-backdrop" id="m-drawer-backdrop"></div>
+    <div class="m-drawer-panel">
+      <div class="m-drawer-header">
+        <div class="m-brand-box">
+          <span class="m-brand-title" data-i18n="brand_title">ALAMEIN</span>
+          <span class="m-brand-arabic" data-i18n="brand_ar">أبراج العلمين</span>
+        </div>
+        <button class="m-drawer-close" id="m-drawer-close" aria-label="Close menu">&times;</button>
+      </div>
+
+      <nav class="m-drawer-nav">
+        <a href="#home" class="m-nav-link active" data-i18n="nav_home">Home</a>
+        <a href="#about" class="m-nav-link" data-i18n="nav_about">About</a>
+        <a href="#residences" class="m-nav-link" data-i18n="nav_residences">Residences</a>
+        <a href="#amenities" class="m-nav-link" data-i18n="nav_amenities">Amenities</a>
+        <a href="#floorplans" class="m-nav-link" data-i18n="nav_floorplans">Floor Plans</a>
+        <a href="#gallery" class="m-nav-link" data-i18n="nav_gallery">Gallery</a>
+        <a href="#location" class="m-nav-link" data-i18n="nav_location">Location</a>
+        <a href="#contact" class="m-nav-link" data-i18n="nav_contact">Contact</a>
+      </nav>
+
+      <div class="m-drawer-footer">
+        <button class="btn-primary m-btn-book" id="m-btn-book">
+          <span data-i18n="btn_book_tour">Book a Tour</span>
+          <svg class="btn-arrow-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </button>
+        <button class="m-lang-btn" id="m-lang-btn">
+          <svg class="globe-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+          <span class="m-lang-text" id="m-lang-indicator">العربية</span>
+        </button>
+      </div>
+    </div>
+  </div>
 
   <!-- ====================================================================== -->
   <!-- SCROLLYTELLING CONTAINER: 4 CHAPTERS PINNED ON IMAGE SEQUENCE CANVAS    -->
@@ -859,40 +909,227 @@
   </section>
 
   <!-- ====================================================================== -->
-  <!-- SECTION 8: FOOTER CTA                                                  -->
+  <!-- SECTION 8: LUXURY FOOTER (EXACT REPLICATION OF DESIGN REFERENCE)       -->
   <!-- ====================================================================== -->
-  <footer class="section-footer-cta" id="contact">
+  <footer class="luxury-footer" id="contact">
     <div class="footer-bg-wrapper" style="background-image: url('ezgif-26abb239274a1d7d-jpg/ezgif-frame-001.jpg');">
       <div class="footer-overlay-gradient"></div>
     </div>
 
-    <div class="footer-content-container">
-      <div class="footer-cta-box">
-        <h2 class="footer-cta-title" data-i18n="footer_title">Your Coastal Home Awaits</h2>
-        <p class="footer-cta-sub" data-i18n="footer_sub">Book a private tour and experience Alamein Towers in person.</p>
+    <div class="footer-inner-container">
+      
+      <!-- Top Floating Stay Connected Newsletter Card (Matching Screenshot) -->
+      <div class="footer-newsletter-card">
+        <div class="fn-card-glow"></div>
+        <div class="fn-col-heading">
+          <div class="fn-eyebrow">
+            <span class="fn-gold-bar"></span>
+            <span class="fn-eyebrow-text" data-i18n="fn_eyebrow">STAY CONNECTED</span>
+          </div>
+          <h3 class="fn-title">
+            <span class="fn-title-line" data-i18n="fn_title_l1">Exceptional homes,</span>
+            <span class="fn-title-line gold-serif-italic" data-i18n="fn_title_l2">extraordinary living.</span>
+          </h3>
+        </div>
 
-        <div class="footer-btn-row">
-          <button class="btn-primary" id="btn-footer-book">
-            <span data-i18n="btn_book_tour">Book a Tour</span>
-            <svg class="btn-arrow-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
-              <line x1="5" y1="12" x2="19" y2="12"></line>
-              <polyline points="12 5 19 12 12 19"></polyline>
+        <div class="fn-col-desc">
+          <p class="fn-desc-text" data-i18n="fn_desc">
+            Be the first to receive exclusive property updates, luxury insights and off-market opportunities in New Alamein.
+          </p>
+        </div>
+
+        <div class="fn-col-form">
+          <form class="fn-form" id="newsletter-form">
+            <div class="fn-input-wrapper">
+              <svg class="fn-mail-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L1 7"></path>
+              </svg>
+              <input type="email" class="fn-input" placeholder="Enter your email" required id="newsletter-email" data-i18n-ph="ph_newsletter_email">
+              <button type="submit" class="fn-btn-submit">
+                <span data-i18n="btn_subscribe">Subscribe</span>
+                <svg class="fn-btn-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+            </div>
+            <div class="fn-privacy-note">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+              <span data-i18n="fn_privacy">We respect your privacy.</span>
+            </div>
+          </form>
+          <div class="fn-success-msg" id="newsletter-success" style="display: none;">
+            <span data-i18n="newsletter_success">✓ Thank you for subscribing. You're on the exclusive VIP list.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Footer 5-Column Navigation Grid (Matching Screenshot) -->
+      <div class="footer-nav-grid">
+        <!-- Col 1: Brand & Socials -->
+        <div class="footer-col-brand">
+          <a href="#" class="footer-brand-header">
+            <svg class="footer-towers-icon" width="38" height="46" viewBox="0 0 38 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15 4L23 8V44H15V4Z" fill="url(#fGoldGrad)" opacity="0.95"/>
+              <line x1="19" y1="10" x2="19" y2="44" stroke="#0a0e14" stroke-width="1.2"/>
+              <path d="M6 12L13 15V44H6V12Z" fill="url(#fGoldGrad)" opacity="0.8"/>
+              <line x1="9.5" y1="16" x2="9.5" y2="44" stroke="#0a0e14" stroke-width="1.2"/>
+              <path d="M25 18L32 21V44H25V18Z" fill="url(#fGoldGrad)" opacity="0.8"/>
+              <line x1="28.5" y1="22" x2="28.5" y2="44" stroke="#0a0e14" stroke-width="1.2"/>
+              <line x1="2" y1="44" x2="36" y2="44" stroke="url(#fGoldGrad)" stroke-width="2"/>
+              <defs>
+                <linearGradient id="fGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#faeccd"/>
+                  <stop offset="45%" stop-color="#dfb76e"/>
+                  <stop offset="100%" stop-color="#b88636"/>
+                </linearGradient>
+              </defs>
             </svg>
-          </button>
+            <div class="footer-brand-titles">
+              <span class="fb-main" data-i18n="brand_title">ALAMEIN</span>
+              <span class="fb-sub" data-i18n="brand_sub">TOWERS</span>
+              <span class="fb-ar" data-i18n="brand_ar">أبراج العلمين</span>
+            </div>
+          </a>
 
-          <button class="btn-glass" id="btn-footer-contact">
-            <span data-i18n="btn_contact_us">Contact Us</span>
-          </button>
+          <p class="footer-brand-desc" data-i18n="footer_brand_desc">
+            Redefining coastal living through iconic architecture, world-class amenities and an unparalleled Mediterranean lifestyle in New Alamein.
+          </p>
+
+          <div class="footer-social-links">
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="social-circle" aria-label="Facebook">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="social-circle" aria-label="Instagram">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="social-circle" aria-label="YouTube">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-circle" aria-label="LinkedIn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: EXPLORE -->
+        <div class="footer-col-nav">
+          <div class="footer-col-heading-wrap">
+            <h4 class="footer-col-title" data-i18n="f_col_explore">EXPLORE</h4>
+            <span class="footer-col-accent-bar"></span>
+          </div>
+          <ul class="footer-link-list">
+            <li><a href="#residences" class="footer-link"><span data-i18n="f_link_residences">Residences</span><span class="footer-link-arrow">›</span></a></li>
+            <li><a href="#floorplans" class="footer-link"><span data-i18n="f_link_floorplans">Floor Plans</span><span class="footer-link-arrow">›</span></a></li>
+            <li><a href="#amenities" class="footer-link"><span data-i18n="f_link_amenities">Amenities</span><span class="footer-link-arrow">›</span></a></li>
+            <li><a href="#location" class="footer-link"><span data-i18n="f_link_location">Location</span><span class="footer-link-arrow">›</span></a></li>
+            <li><a href="#gallery" class="footer-link"><span data-i18n="f_link_gallery">Gallery</span><span class="footer-link-arrow">›</span></a></li>
+            <li><a href="#about" class="footer-link"><span data-i18n="f_link_updates">Latest Updates</span><span class="footer-link-arrow">›</span></a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: ABOUT -->
+        <div class="footer-col-nav">
+          <div class="footer-col-heading-wrap">
+            <h4 class="footer-col-title" data-i18n="f_col_about">ABOUT</h4>
+            <span class="footer-col-accent-bar"></span>
+          </div>
+          <ul class="footer-link-list">
+            <li><a href="#about" class="footer-link"><span data-i18n="f_link_story">Our Story</span><span class="footer-link-arrow">›</span></a></li>
+            <li><a href="#floorplans" class="footer-link"><span data-i18n="f_link_masterplan">Master Plan</span><span class="footer-link-arrow">›</span></a></li>
+            <li><a href="#amenities" class="footer-link"><span data-i18n="f_link_sustainability">Sustainability</span><span class="footer-link-arrow">›</span></a></li>
+            <li><a href="#about" class="footer-link"><span data-i18n="f_link_team">Our Team</span><span class="footer-link-arrow">›</span></a></li>
+            <li><a href="#contact" class="footer-link"><span data-i18n="f_link_careers">Careers</span><span class="footer-link-arrow">›</span></a></li>
+            <li><a href="#gallery" class="footer-link"><span data-i18n="f_link_press">Press & Media</span><span class="footer-link-arrow">›</span></a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: RESOURCES -->
+        <div class="footer-col-nav">
+          <div class="footer-col-heading-wrap">
+            <h4 class="footer-col-title" data-i18n="f_col_resources">RESOURCES</h4>
+            <span class="footer-col-accent-bar"></span>
+          </div>
+          <ul class="footer-link-list">
+            <li><a href="#modal-booking" class="footer-link btn-trigger-modal"><span data-i18n="f_link_brochures">Brochures</span><span class="footer-link-arrow">›</span></a></li>
+            <li><a href="#floorplans" class="footer-link"><span data-i18n="f_link_payments">Payment Plans</span><span class="footer-link-arrow">›</span></a></li>
+            <li><a href="#modal-booking" class="footer-link btn-trigger-modal"><span data-i18n="f_link_guide">Buying Guide</span><span class="footer-link-arrow">›</span></a></li>
+            <li><a href="#modal-booking" class="footer-link btn-trigger-modal"><span data-i18n="f_link_investor">Investor Information</span><span class="footer-link-arrow">›</span></a></li>
+            <li><a href="#modal-booking" class="footer-link btn-trigger-modal"><span data-i18n="f_link_faq">FAQ</span><span class="footer-link-arrow">›</span></a></li>
+            <li><a href="#modal-booking" class="footer-link btn-trigger-modal"><span data-i18n="f_link_terms">Terms & Conditions</span><span class="footer-link-arrow">›</span></a></li>
+          </ul>
+        </div>
+
+        <!-- Col 5: CONTACT -->
+        <div class="footer-col-nav footer-col-contact">
+          <div class="footer-col-heading-wrap">
+            <h4 class="footer-col-title" data-i18n="f_col_contact">CONTACT</h4>
+            <span class="footer-col-accent-bar"></span>
+          </div>
+          <ul class="footer-contact-list">
+            <li class="contact-item">
+              <svg class="contact-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <div class="contact-text-box">
+                <span data-i18n="f_contact_loc_l1">New Alamein, Matrouh</span>
+                <span data-i18n="f_contact_loc_l2">Egypt</span>
+              </div>
+            </li>
+            <li class="contact-item">
+              <svg class="contact-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              <a href="tel:+201067894560" class="contact-link" dir="ltr">+20 106 789 4560</a>
+            </li>
+            <li class="contact-item">
+              <svg class="contact-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L1 7"></path>
+              </svg>
+              <a href="mailto:info@alameintowers.com" class="contact-link">info@alameintowers.com</a>
+            </li>
+            <li class="contact-item">
+              <svg class="contact-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <span class="contact-text-box" data-i18n="f_contact_hours">Sun - Thu: 9:00 AM - 6:00 PM</span>
+            </li>
+          </ul>
         </div>
       </div>
 
+      <!-- Bottom Bar (Matching Screenshot) -->
       <div class="footer-bottom-bar">
-        <div class="footer-brand">
-          <span class="f-brand-title">ALAMEIN TOWERS</span>
-          <span class="f-brand-arabic">أبراج العلمين</span>
+        <div class="fbb-left">
+          <p class="fbb-copy" data-i18n="fbb_copyright">© 2025 ALAMEIN TOWERS. All rights reserved.</p>
         </div>
-        <p class="footer-copy" data-i18n="footer_copy">&copy; 2026 Alamein Towers. All rights reserved. Luxury Coastal Living.</p>
+        <div class="fbb-center">
+          <a href="#" class="fbb-link" data-i18n="fbb_privacy">Privacy Policy</a>
+          <span class="fbb-divider">|</span>
+          <a href="#" class="fbb-link" data-i18n="fbb_terms">Terms of Use</a>
+          <span class="fbb-divider">|</span>
+          <a href="#" class="fbb-link" data-i18n="fbb_cookie">Cookie Policy</a>
+        </div>
+        <div class="fbb-right">
+          <button class="footer-lang-btn" id="footer-lang-toggle" aria-label="Toggle language">
+            <svg class="globe-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            <span id="footer-lang-text">English</span>
+            <span class="fbb-caret">⌵</span>
+          </button>
+        </div>
       </div>
+
     </div>
   </footer>
 

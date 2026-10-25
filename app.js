@@ -140,11 +140,45 @@
       loc_c4_title: "Easy Access from Cairo",
       loc_c4_dist: "2 hours via Dabaa Corridor",
 
-      // Footer
-      footer_title: "Your Coastal Home Awaits",
-      footer_sub: "Book a private tour and experience Alamein Towers in person.",
-      btn_contact_us: "Contact Us",
-      footer_copy: "© 2026 Alamein Towers. All rights reserved. Luxury Coastal Living.",
+      // New Luxury Footer (Exact Match to Design Reference)
+      fn_eyebrow: "STAY CONNECTED",
+      fn_title_l1: "Exceptional homes,",
+      fn_title_l2: "extraordinary living.",
+      fn_desc: "Be the first to receive exclusive property updates, luxury insights and off-market opportunities in New Alamein.",
+      btn_subscribe: "Subscribe",
+      fn_privacy: "We respect your privacy.",
+      ph_newsletter_email: "Enter your email",
+      newsletter_success: "✓ Thank you for subscribing. You're on the exclusive VIP list.",
+      footer_brand_desc: "Redefining coastal living through iconic architecture, world-class amenities and an unparalleled Mediterranean lifestyle in New Alamein.",
+      f_col_explore: "EXPLORE",
+      f_col_about: "ABOUT",
+      f_col_resources: "RESOURCES",
+      f_col_contact: "CONTACT",
+      f_link_residences: "Residences",
+      f_link_floorplans: "Floor Plans",
+      f_link_amenities: "Amenities",
+      f_link_location: "Location",
+      f_link_gallery: "Gallery",
+      f_link_updates: "Latest Updates",
+      f_link_story: "Our Story",
+      f_link_masterplan: "Master Plan",
+      f_link_sustainability: "Sustainability",
+      f_link_team: "Our Team",
+      f_link_careers: "Careers",
+      f_link_press: "Press & Media",
+      f_link_brochures: "Brochures",
+      f_link_payments: "Payment Plans",
+      f_link_guide: "Buying Guide",
+      f_link_investor: "Investor Information",
+      f_link_faq: "FAQ",
+      f_link_terms: "Terms & Conditions",
+      f_contact_loc_l1: "New Alamein, Matrouh",
+      f_contact_loc_l2: "Egypt",
+      f_contact_hours: "Sun - Thu: 9:00 AM - 6:00 PM",
+      fbb_copyright: "© 2025 ALAMEIN TOWERS. All rights reserved.",
+      fbb_privacy: "Privacy Policy",
+      fbb_terms: "Terms of Use",
+      fbb_cookie: "Cookie Policy",
 
       // Modals
       modal_b_eyebrow: "EXCLUSIVE ACCESS",
@@ -297,11 +331,45 @@
       loc_c4_title: "سهولة الوصول من القاهرة",
       loc_c4_dist: "ساعتان فقط عبر محور الضبعة",
 
-      // Footer
-      footer_title: "منزلك الساحلي بانتظارك",
-      footer_sub: "احجز جولتك الخاصة وعش تجربة أبراج العلمين بنفسك على أرض الواقع.",
-      btn_contact_us: "تواصل معنا",
-      footer_copy: "© 2026 أبراج العلمين. جميع الحقوق محفوظة. الرفاهية الساحلية المطلقة.",
+      // New Luxury Footer (Arabic RTL)
+      fn_eyebrow: "ابقَ على تواصل",
+      fn_title_l1: "منازل استثنائية،",
+      fn_title_l2: "حياة لا مثيل لها.",
+      fn_desc: "كن أول من يتلقى أحدث المستجدات العقارية، الرؤى الفاخرة والفرص الاستثمارية الحصرية في العلمين الجديدة.",
+      btn_subscribe: "اشترك الآن",
+      fn_privacy: "نحن نحترم خصوصيتك التامة.",
+      ph_newsletter_email: "أدخل بريدك الإلكتروني",
+      newsletter_success: "✓ شكراً لاشتراكك. أنت الآن مسجل في قائمة كبار الشخصيات الحصرية.",
+      footer_brand_desc: "إعادة صياغة مفهوم الحياة الساحلية من خلال عمارة أيقونية ومرافق عالمية وأسلوب حياة متوسطي لا يُضاهى في العلمين الجديدة.",
+      f_col_explore: "استكشف",
+      f_col_about: "عن المشروع",
+      f_col_resources: "المصادر",
+      f_col_contact: "اتصل بنا",
+      f_link_residences: "الوحدات السكنية",
+      f_link_floorplans: "مخططات الشقق",
+      f_link_amenities: "المرافق والخدمات",
+      f_link_location: "الموقع الجغرافي",
+      f_link_gallery: "معرض الصور",
+      f_link_updates: "آخر التحديثات",
+      f_link_story: "قصتنا",
+      f_link_masterplan: "المخطط العام",
+      f_link_sustainability: "الاستدامة والبيئة",
+      f_link_team: "فريق العمل",
+      f_link_careers: "الوظائف",
+      f_link_press: "الصحافة والإعلام",
+      f_link_brochures: "الكتيبات التعريفية",
+      f_link_payments: "خطط السداد",
+      f_link_guide: "دليل الشراء",
+      f_link_investor: "معلومات المستثمرين",
+      f_link_faq: "الأسئلة الشائعة",
+      f_link_terms: "الشروط والأحكام",
+      f_contact_loc_l1: "العلمين الجديدة، مطروح",
+      f_contact_loc_l2: "جمهورية مصر العربية",
+      f_contact_hours: "الأحد - الخميس: 9:00 ص - 6:00 م",
+      fbb_copyright: "© 2025 أبراج العلمين. جميع الحقوق محفوظة.",
+      fbb_privacy: "سياسة الخصوصية",
+      fbb_terms: "شروط الاستخدام",
+      fbb_cookie: "سياسة الكوكيز",
 
       // Modals
       modal_b_eyebrow: "دعوة حصرية",
@@ -338,12 +406,29 @@
       indicator.textContent = lang === 'ar' ? 'English' : 'العربية';
     }
 
+    const mIndicator = document.getElementById('m-lang-indicator');
+    if (mIndicator) {
+      mIndicator.textContent = lang === 'ar' ? 'English' : 'العربية';
+    }
+
+    const footerLangText = document.getElementById('footer-lang-text');
+    if (footerLangText) {
+      footerLangText.textContent = lang === 'ar' ? 'العربية' : 'English';
+    }
+
     const dict = translations[lang] || translations.en;
 
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.getAttribute('data-i18n');
       if (dict[key]) {
         el.textContent = dict[key];
+      }
+    });
+
+    document.querySelectorAll('[data-i18n-ph]').forEach(el => {
+      const key = el.getAttribute('data-i18n-ph');
+      if (dict[key]) {
+        el.setAttribute('placeholder', dict[key]);
       }
     });
 
@@ -972,13 +1057,95 @@
       });
     });
 
-    const btnContact = document.getElementById('btn-footer-contact');
-    if (btnContact) {
-      btnContact.addEventListener('click', () => {
+    // Mobile Drawer Toggle
+    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const mobileDrawer = document.getElementById('mobile-nav-drawer');
+    const mobileDrawerClose = document.getElementById('m-drawer-close');
+    const mobileDrawerBackdrop = document.getElementById('m-drawer-backdrop');
+    const mBtnBook = document.getElementById('m-btn-book');
+    const mLangBtn = document.getElementById('m-lang-btn');
+
+    function openMobileDrawer() {
+      if (mobileDrawer) {
+        mobileDrawer.classList.add('active');
+        mobileDrawer.setAttribute('aria-hidden', 'false');
+        if (mobileMenuToggle) mobileMenuToggle.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeMobileDrawer() {
+      if (mobileDrawer) {
+        mobileDrawer.classList.remove('active');
+        mobileDrawer.setAttribute('aria-hidden', 'true');
+        if (mobileMenuToggle) mobileMenuToggle.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    }
+
+    if (mobileMenuToggle) {
+      mobileMenuToggle.addEventListener('click', () => {
+        if (mobileDrawer && mobileDrawer.classList.contains('active')) {
+          closeMobileDrawer();
+        } else {
+          openMobileDrawer();
+        }
+      });
+    }
+    if (mobileDrawerClose) {
+      mobileDrawerClose.addEventListener('click', closeMobileDrawer);
+    }
+    if (mobileDrawerBackdrop) {
+      mobileDrawerBackdrop.addEventListener('click', closeMobileDrawer);
+    }
+    document.querySelectorAll('.m-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        closeMobileDrawer();
+      });
+    });
+    if (mBtnBook) {
+      mBtnBook.addEventListener('click', () => {
+        closeMobileDrawer();
         const modalBooking = document.getElementById('modal-booking');
         if (modalBooking) modalBooking.classList.add('active');
       });
     }
+    if (mLangBtn) {
+      mLangBtn.addEventListener('click', () => {
+        setLanguage(currentLang === 'ar' ? 'en' : 'ar');
+      });
+    }
+
+    // Footer Language Toggle
+    const footerLangToggle = document.getElementById('footer-lang-toggle');
+    if (footerLangToggle) {
+      footerLangToggle.addEventListener('click', () => {
+        setLanguage(currentLang === 'ar' ? 'en' : 'ar');
+      });
+    }
+
+    // Newsletter Form Submission
+    const newsletterForm = document.getElementById('newsletter-form');
+    const newsletterSuccess = document.getElementById('newsletter-success');
+    if (newsletterForm) {
+      newsletterForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const emailInput = document.getElementById('newsletter-email');
+        if (emailInput && emailInput.value) {
+          newsletterForm.style.display = 'none';
+          if (newsletterSuccess) newsletterSuccess.style.display = 'block';
+        }
+      });
+    }
+
+    // Modal Trigger Buttons in Footer (Brochure, Guide, FAQ, etc.)
+    document.querySelectorAll('.btn-trigger-modal').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const modalBooking = document.getElementById('modal-booking');
+        if (modalBooking) modalBooking.classList.add('active');
+      });
+    });
   }
 
   /* ------------------------------------------------------------------------ */
