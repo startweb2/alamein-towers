@@ -6,16 +6,16 @@
   --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-cairo: 'Cairo', -apple-system, BlinkMacSystemFont, sans-serif;
 
-  --gold-primary: #dfb76e;
-  --gold-light: #f8e8ce;
-  --gold-dark: #b88636;
-  --gold-gradient: linear-gradient(135deg, #faeccd 0%, #dfb76e 50%, #b88636 100%);
+  --gold-primary: #fae09c;
+  --gold-light: #fff5e0;
+  --gold-dark: #cfa255;
+  --gold-gradient: linear-gradient(135deg, #ffffff 0%, #fae09c 50%, #e5be73 100%);
   --gold-btn-bg: #dfb76e;
-  --gold-btn-hover: #ecc984;
+  --gold-btn-hover: #f0cf85;
   --gold-btn-active: #cfa255;
-  --gold-glow: rgba(223, 183, 110, 0.45);
-  --gold-border: rgba(223, 183, 110, 0.28);
-  --gold-subtle: rgba(223, 183, 110, 0.12);
+  --gold-glow: rgba(250, 224, 156, 0.5);
+  --gold-border: rgba(250, 224, 156, 0.35);
+  --gold-subtle: rgba(250, 224, 156, 0.15);
 
   --bg-dark: #06090e;
   --bg-card: rgba(14, 19, 27, 0.75);
@@ -84,7 +84,7 @@ a {
   color: var(--gold-primary);
   font-weight: 800;
   -webkit-text-fill-color: var(--gold-primary);
-  text-shadow: 0 0 20px rgba(223, 183, 110, 0.55), 0 2px 8px rgba(0, 0, 0, 0.8);
+  text-shadow: 0 0 24px rgba(250, 224, 156, 0.65), 0 2px 10px rgba(0, 0, 0, 0.95);
 }
 
 [dir="rtl"] .chapter-title {
@@ -783,7 +783,7 @@ a {
   background: none;
   -webkit-background-clip: unset;
   -webkit-text-fill-color: var(--gold-primary);
-  text-shadow: 0 0 24px rgba(223, 183, 110, 0.65), 0 2px 8px rgba(0, 0, 0, 0.85);
+  text-shadow: 0 0 24px rgba(250, 224, 156, 0.65), 0 2px 10px rgba(0, 0, 0, 0.95);
 }
 
 [dir="ltr"] .gold-gradient-text {
@@ -1144,6 +1144,7 @@ a {
 
 .gold-accent {
   color: var(--gold-primary);
+  text-shadow: 0 0 20px rgba(250, 224, 156, 0.55), 0 2px 8px rgba(0, 0, 0, 0.95);
 }
 
 .section-desc {
@@ -1812,7 +1813,7 @@ a {
   background: none;
   -webkit-background-clip: unset;
   -webkit-text-fill-color: var(--gold-primary);
-  text-shadow: 0 0 20px rgba(223, 183, 110, 0.55);
+  text-shadow: 0 0 20px rgba(250, 224, 156, 0.55), 0 2px 8px rgba(0, 0, 0, 0.95);
 }
 
 [dir="ltr"] .gold-serif-italic {
